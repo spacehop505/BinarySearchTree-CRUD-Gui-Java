@@ -2,6 +2,7 @@ package run;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Iterator;
@@ -56,6 +57,7 @@ public class Gui {
 		scrollPane.setViewportView(table);
 
 		JButton createBtn = new JButton("Create");
+		createBtn.setBackground(SystemColor.inactiveCaption);
 		createBtn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		createBtn.addActionListener(new ActionListener() {
 			@Override
@@ -113,8 +115,8 @@ public class Gui {
 		frame.getContentPane().add(lblQuantity1);
 
 		JLabel lblCreateFruit = new JLabel("Create Node");
-		lblCreateFruit.setForeground(Color.BLACK);
-		lblCreateFruit.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblCreateFruit.setForeground(Color.BLUE);
+		lblCreateFruit.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblCreateFruit.setBounds(20, 30, 180, 30);
 		frame.getContentPane().add(lblCreateFruit);
 
@@ -125,22 +127,23 @@ public class Gui {
 		frame.getContentPane().add(lblSelectAFruit);
 
 		JLabel lblDeleteFruit = new JLabel("Delete Node");
-		lblDeleteFruit.setForeground(new Color(0, 0, 0));
-		lblDeleteFruit.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblDeleteFruit.setBounds(659, 150, 180, 30);
+		lblDeleteFruit.setForeground(Color.BLUE);
+		lblDeleteFruit.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblDeleteFruit.setBounds(659, 30, 180, 30);
 		frame.getContentPane().add(lblDeleteFruit);
 
 		JLabel lblname1_1 = new JLabel("Key:");
 		lblname1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblname1_1.setBounds(659, 180, 80, 30);
+		lblname1_1.setBounds(659, 60, 80, 30);
 		frame.getContentPane().add(lblname1_1);
 
 		id3 = new JTextField();
 		id3.setColumns(10);
-		id3.setBounds(739, 180, 100, 30);
+		id3.setBounds(739, 60, 100, 30);
 		frame.getContentPane().add(id3);
 
 		JButton deleteBtn = new JButton("Delete");
+		deleteBtn.setBackground(SystemColor.inactiveCaption);
 		deleteBtn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		deleteBtn.addActionListener(new ActionListener() {
 			@Override
@@ -156,10 +159,11 @@ public class Gui {
 				}
 			}
 		});
-		deleteBtn.setBounds(659, 220, 180, 30);
+		deleteBtn.setBounds(659, 100, 180, 30);
 		frame.getContentPane().add(deleteBtn);
 
 		JButton searchBtn = new JButton("Search");
+		searchBtn.setBackground(SystemColor.inactiveCaption);
 		searchBtn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		searchBtn.addActionListener(new ActionListener() {
 			@Override
@@ -190,28 +194,28 @@ public class Gui {
 				}
 			}
 		});
-		searchBtn.setBounds(659, 500, 180, 30);
+		searchBtn.setBounds(659, 390, 180, 30);
 		frame.getContentPane().add(searchBtn);
 
 		id4 = new JTextField();
 		id4.setColumns(10);
-		id4.setBounds(739, 460, 100, 30);
+		id4.setBounds(739, 350, 100, 30);
 		frame.getContentPane().add(id4);
 
 		JLabel lblname1_1_1 = new JLabel("Key:");
 		lblname1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblname1_1_1.setBounds(659, 460, 80, 30);
+		lblname1_1_1.setBounds(659, 350, 80, 30);
 		frame.getContentPane().add(lblname1_1_1);
 
 		JLabel lblSearchSold = new JLabel("Search Node");
-		lblSearchSold.setForeground(new Color(0, 0, 0));
-		lblSearchSold.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblSearchSold.setBounds(659, 420, 180, 30);
+		lblSearchSold.setForeground(Color.BLUE);
+		lblSearchSold.setFont(new Font("Tahoma", Font.BOLD, 17));
+		lblSearchSold.setBounds(659, 310, 180, 30);
 		frame.getContentPane().add(lblSearchSold);
 
 		JLabel lblUpdateFruit = new JLabel("Update Node");
-		lblUpdateFruit.setForeground(new Color(0, 0, 0));
-		lblUpdateFruit.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUpdateFruit.setForeground(Color.BLUE);
+		lblUpdateFruit.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblUpdateFruit.setBounds(20, 310, 180, 30);
 		frame.getContentPane().add(lblUpdateFruit);
 
@@ -246,6 +250,7 @@ public class Gui {
 		frame.getContentPane().add(quantity2);
 
 		JButton updateBtn = new JButton("Update");
+		updateBtn.setBackground(SystemColor.inactiveCaption);
 		updateBtn.setFont(new Font("Tahoma", Font.BOLD, 11));
 		updateBtn.addActionListener(new ActionListener() {
 			@Override
@@ -285,15 +290,16 @@ public class Gui {
 
 		warning3 = new JLabel("");
 		warning3.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		warning3.setBounds(659, 250, 180, 30);
+		warning3.setBounds(659, 130, 180, 30);
 		frame.getContentPane().add(warning3);
 
 		warning4 = new JLabel("");
 		warning4.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		warning4.setBounds(659, 530, 180, 30);
+		warning4.setBounds(659, 420, 180, 30);
 		frame.getContentPane().add(warning4);
 
-		JButton btnNewButton_2_1 = new JButton("Refresh");
+		JButton btnNewButton_2_1 = new JButton("Refresh Inorder");
+		btnNewButton_2_1.setBackground(SystemColor.inactiveCaption);
 		btnNewButton_2_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -325,6 +331,7 @@ public class Gui {
 		frame.getContentPane().add(key1);
 
 		JButton btnLoadNodes = new JButton("Load Nodes");
+		btnLoadNodes.setBackground(SystemColor.inactiveCaption);
 		btnLoadNodes.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
